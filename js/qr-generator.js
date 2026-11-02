@@ -42,8 +42,8 @@ function generateAllQRCodes() {
       // Generate QR code
       new QRCode(document.getElementById(`qr-${guest.id}`), {
         text: invitationUrl,
-        width: 200,
-        height: 200,
+width: 512,
+height: 512,
         colorDark: "#000000",
         colorLight: "#ffffff",
         correctLevel: QRCode.CorrectLevel.H
@@ -110,8 +110,8 @@ function downloadAllQRCodes() {
     
     new QRCode(tempDiv, {
       text: invitationUrl,
-      width: 300,
-      height: 300,
+width: 512,
+height: 512,
       colorDark: "#000000",
       colorLight: "#ffffff",
       correctLevel: QRCode.CorrectLevel.H

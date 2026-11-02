@@ -9,149 +9,26 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 <style>
-.invitation-viewer {
-  min-height: 100vh;
-  padding: 2rem 1rem;
-  background: radial-gradient(circle at 50% 50%, rgba(198,164,106,.08), transparent 70%), #090909;
-}
-
-.invitation-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.invitation-header h1 {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  margin: 0;
-  letter-spacing: 0.1em;
-}
-
-.invitation-header .tagline {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.5rem;
-  color: var(--champ);
-  font-style: italic;
-  margin: 0.5rem 0;
-}
-
-.guest-info {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.guest-info .guest-name {
-  font-family: Cinzel, serif;
-  font-size: clamp(1.8rem, 5vw, 2.5rem);
-  color: var(--champ);
-  margin: 0.5rem 0;
-}
-
-.guest-info .guest-designation {
-  color: var(--muted);
-  font-size: 1.1rem;
-  margin: 0.3rem 0;
-}
-
-.invitation-image-container {
-  max-width: 600px;
-  margin: 0 auto 2rem;
-  padding: 1rem;
-  background: linear-gradient(145deg, rgba(255,255,255,.07), rgba(255,255,255,.02));
-  border: 2px solid var(--gold);
-  border-radius: 12px;
-  box-shadow: 0 0 40px rgba(198,164,106,.2);
-}
-
-.invitation-image-container img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 8px;
-}
-
-.download-section {
-  text-align: center;
-  margin: 2rem 0;
-}
-
-.download-btn {
-  display: inline-block;
-  padding: 1rem 2.5rem;
-  background: linear-gradient(145deg, var(--gold), var(--bronze));
-  color: #000;
-  font-family: Cinzel, serif;
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 20px rgba(198,164,106,.4);
-  letter-spacing: 0.05em;
-}
-
-.download-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 30px rgba(198,164,106,.6);
-  color: #000;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 1rem;
-  color: var(--gold);
-  text-decoration: none;
-  border-bottom: 1px solid var(--bronze);
-  transition: 0.3s;
-}
-
-.back-link:hover {
-  color: var(--champ);
-  border-color: var(--gold);
-}
-
-.error-message {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: linear-gradient(145deg, rgba(255,0,0,.1), rgba(255,255,255,.02));
-  border: 1px solid rgba(255,100,100,.5);
-  border-radius: 12px;
-  max-width: 500px;
-  margin: 2rem auto;
-}
-
-.error-message h2 {
-  color: #ff6b6b;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.error-message p {
-  color: var(--ivory);
-  margin-bottom: 1.5rem;
-}
-
-.footer {
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--muted);
-  border-top: 1px solid var(--bronze);
-  margin-top: 3rem;
-}
-
-.footer p {
-  margin: 0.3rem 0;
-}
-
-@media (max-width: 600px) {
-  .invitation-viewer {
-    padding: 1rem 0.5rem;
-  }
-  .invitation-image-container {
-    padding: 0.5rem;
-  }
-}
+.invitation-viewer { min-height:100vh; padding:2rem 1rem; background: radial-gradient(circle at 50% 50%, rgba(198,164,106,.08), transparent 70%), #090909; }
+.invitation-header { text-align:center; margin-bottom:2rem; }
+.invitation-header h1 { font-size: clamp(2.5rem, 8vw, 4rem); margin:0; letter-spacing:.1em; }
+.invitation-header .tagline { font-family:"Cormorant Garamond",serif; font-size:1.5rem; color:var(--champ); font-style:italic; margin:.5rem 0; }
+.guest-info { text-align:center; margin:2rem 0; }
+.guest-info .guest-name { font-family:Cinzel,serif; font-size:clamp(1.8rem,5vw,2.5rem); color:var(--champ); margin:.5rem 0; }
+.guest-info .guest-designation { color:var(--muted); font-size:1.1rem; margin:.3rem 0; }
+.video-container { max-width:720px; margin:0 auto 2rem; padding:1rem; background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.02)); border:2px solid var(--gold); border-radius:12px; box-shadow:0 0 40px rgba(198,164,106,.2); }
+.video-container video { width:100%; height:auto; display:block; border-radius:8px; background:#000; }
+.download-section { text-align:center; margin:2rem 0; }
+.download-btn { display:inline-block; padding:1rem 2.5rem; background:linear-gradient(145deg,var(--gold),var(--bronze)); color:#000; font-family:Cinzel,serif; font-size:1.1rem; font-weight:600; text-decoration:none; border:none; border-radius:8px; cursor:pointer; transition:all .3s ease; box-shadow:0 4px 20px rgba(198,164,106,.4); letter-spacing:.05em; }
+.download-btn:hover { transform:translateY(-2px); box-shadow:0 6px 30px rgba(198,164,106,.6); color:#000; }
+.back-link { display:inline-block; margin-top:1rem; color:var(--gold); text-decoration:none; border-bottom:1px solid var(--bronze); transition:.3s; }
+.back-link:hover { color:var(--champ); border-color:var(--gold); }
+.error-message { text-align:center; padding:3rem 2rem; background:linear-gradient(145deg,rgba(255,0,0,.1),rgba(255,255,255,.02)); border:1px solid rgba(255,100,100,.5); border-radius:12px; max-width:500px; margin:2rem auto; }
+.error-message h2 { color:#ff6b6b; font-size:2rem; margin-bottom:1rem; }
+.loading { text-align:center; color:var(--gold); padding:2rem; }
+.footer { text-align:center; padding:2rem 1rem; color:var(--muted); border-top:1px solid var(--bronze); margin-top:3rem; }
+.footer p { margin:.3rem 0; }
+@media (max-width:600px){ .invitation-viewer{padding:1rem .5rem;} .video-container{padding:.5rem;} }
 </style>
 </head>
 <body>
@@ -162,15 +39,8 @@
     <p class="year">2026</p>
     <p class="tagline">A New Beginning. A Timeless Celebration.</p>
   </div>
-
-  <div id="invitationContent">
-    <!-- Content will be loaded by JavaScript -->
-  </div>
-
-  <div style="text-align: center; margin-top: 2rem;">
-    <a href="index.html" class="back-link">? Back to Main Page</a>
-  </div>
-
+  <div id="invitationContent"></div>
+  <div style="text-align:center;margin-top:2rem;"><a href="index.html" class="back-link">Back to Main Page</a></div>
   <footer class="footer">
     <p>PRARAMBH 2026</p>
     <p>Vikash Institute of Technology & Vikash Polytechnic</p>
@@ -178,83 +48,44 @@
     <p>&copy; 2026 PRARAMBH. All rights reserved.</p>
   </footer>
 </div>
-
 <script src="js/guests.js"></script>
 <script>
-function getUrlParameter(name) {
-  const urlParams = new URLSearchParams(window.location.search);
-  return urlParams.get(name);
-}
-
-function downloadImage(imagePath, filename) {
-  // For same-origin images
-  const link = document.createElement('a');
-  link.href = imagePath;
-  link.download = filename;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-function loadInvitation() {
-  const guestId = getUrlParameter('id');
-  const contentDiv = document.getElementById('invitationContent');
-  
-  if (!guestId) {
-    contentDiv.innerHTML = `
-      <div class="error-message">
-        <h2>Invalid Invitation</h2>
-        <p>No guest ID provided. Please use a valid QR code to access your invitation.</p>
-        <a href="index.html" class="download-btn">Go to Main Page</a>
-      </div>
-    `;
-    return;
-  }
-  
-  const guest = getGuestById(guestId);
-  
-  if (!guest) {
-    contentDiv.innerHTML = `
-      <div class="error-message">
-        <h2>Invalid Invitation</h2>
-        <p>The invitation link you used is not valid or has expired.</p>
-        <p>Guest ID: <strong>${guestId}</strong></p>
-        <a href="index.html" class="download-btn">Go to Main Page</a>
-      </div>
-    `;
-    return;
-  }
-  
-  contentDiv.innerHTML = `
+function getUrlParameter(name){const u=new URLSearchParams(window.location.search);return u.get(name);}
+function loadInvitation(){
+  const guestId=getUrlParameter('id');
+  const content=document.getElementById('invitationContent');
+  if(!guestId){content.innerHTML=`<div class="error-message"><h2>Invalid Invitation</h2><p>No guest ID provided.</p><a href="index.html" class="download-btn">Go to Main Page</a></div>`;return;}
+  const guest=getGuestById(guestId);
+  if(!guest){content.innerHTML=`<div class="error-message"><h2>Invalid Invitation</h2><p>The invitation link is not valid. Guest ID: <strong>${guestId}</strong></p><a href="index.html" class="download-btn">Go to Main Page</a></div>`;return;}
+  content.innerHTML=`
     <div class="guest-info">
-      <p style="color: var(--gold); letter-spacing: 0.2em; font-size: 0.9rem;">YOU ARE CORDIALLY INVITED</p>
+      <p style="color:var(--gold);letter-spacing:.2em;font-size:.9rem;">YOU ARE CORDIALLY INVITED</p>
       <h2 class="guest-name">${guest.name}</h2>
       <p class="guest-designation">${guest.designation}</p>
       <p class="guest-designation">${guest.institution}</p>
     </div>
-    
-    <div class="invitation-image-container">
-      <img src="${guest.image}" alt="PRARAMBH 2026 Invitation for ${guest.name}" onerror="this.style.display='none'; document.getElementById('imageError').style.display='block';">
+    <div class="video-container">
+      <div id="loading" class="loading">Loading invitation video...</div>
+      <video id="invVideo" controls playsinline preload="metadata" style="display:none;">
+        <source src="${guest.video}" type="video/mp4">
+        Your browser does not support video playback.
+      </video>
+      <div id="vidError" class="error-message" style="display:none;"><h2>Video Not Available</h2><p>The invitation video could not be loaded. Please contact the organizers.</p></div>
     </div>
-    
-    <div id="imageError" class="error-message" style="display: none;">
-      <h2>Image Not Available</h2>
-      <p>The invitation image could not be loaded. Please contact the organizers.</p>
-    </div>
-    
     <div class="download-section">
-      <button class="download-btn" onclick="downloadImage('${guest.image}', 'PRARAMBH_2026_Invitation_${guestId}.png')">
-        ?? Download Invitation
-      </button>
-      <br>
-      <small style="color: var(--muted); display: block; margin-top: 0.5rem;">
-        Download the original PNG invitation
-      </small>
-    </div>
-  `;
+      <button class="download-btn" onclick="downloadVideo('${guest.video}','PRARAMBH-2026-${guest.id}.mp4')">Download Invitation Video</button>
+      <br><small style="color:var(--muted);display:block;margin-top:.5rem;">Download the original MP4 invitation</small>
+    </div>`;
+  const video=document.getElementById('invVideo');
+  const loading=document.getElementById('loading');
+  video.addEventListener('loadedmetadata',()=>{loading.style.display='none';video.style.display='block';});
+  video.addEventListener('error',()=>{loading.style.display='none';document.getElementById('vidError').style.display='block';});
 }
-
-document.addEventListener('DOMContentLoaded', loadInvitation);
+function downloadVideo(path,filename){
+  const a=document.createElement('a');
+  a.href=path; a.download=filename; document.body.appendChild(a); a.click(); document.body.removeChild(a);
+}
+document.addEventListener('DOMContentLoaded',loadInvitation);
 </script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRARAMBH 2026 - Video Manager</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+body{background:#090909;color:#eee;font-family:Inter,sans-serif;padding:2rem;}
+.card{border:1px solid #c6a46a;border-radius:10px;padding:1rem;margin:1rem 0;background:rgba(255,255,255,.05);}
+video{max-width:100%;height:auto;border-radius:6px;}
+.status.ok{color:#7CFC00;} .status.missing{color:#ff6b6b;}
+</style>
+</head>
+<body>
+<h1 style="color:#c6a46a;font-family:Cinzel,serif;">Video Manager</h1>
+<div id="list"></div>
+<script src="js/guests.js"></script>
+<script>
+const list=document.getElementById('list');
+getAllGuests().forEach(g=>{
+  const card=document.createElement('div');card.className='card';
+  card.innerHTML=`<h3 style="color:#c6a46a;">${g.name}</h3><p>${g.designation} — ${g.institution}</p><p>Expected: <code>${g.video}</code></p><p class="status" id="st-${g.id}">Checking...</p><video src="${g.video}" controls preload="metadata" style="max-width:320px;"></video>`;
+  list.appendChild(card);
+  const v=card.querySelector('video');
+  v.addEventListener('loadeddata',()=>{document.getElementById('st-'+g.id).textContent='Available';document.getElementById('st-'+g.id).className='status ok';});
+  v.addEventListener('error',()=>{document.getElementById('st-'+g.id).textContent='Missing';document.getElementById('st-'+g.id).className='status missing';});
+});
+</script>
+</body>
+</html>

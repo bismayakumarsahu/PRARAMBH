@@ -1,100 +1,17 @@
-// PRARAMBH 2026 Guest Configuration
-// Update this file to add/edit guest information
-// Each guest needs a unique ID and corresponding invitation image
-
 const GUESTS = [
-  {
-    id: "guest01",
-    name: "Dr. Purnendu Mishra",
-    designation: "Principal, Vikash Institute of Technology",
-    institution: "Vikash Institute of Technology",
-    image: "invitations/invitation-01.png"
-  },
-  {
-    id: "guest02",
-    name: "Guest 2 Name",
-    designation: "Guest 2 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-02.png"
-  },
-  {
-    id: "guest03",
-    name: "Guest 3 Name",
-    designation: "Guest 3 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-03.png"
-  },
-  {
-    id: "guest04",
-    name: "Guest 4 Name",
-    designation: "Guest 4 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-04.png"
-  },
-  {
-    id: "guest05",
-    name: "Guest 5 Name",
-    designation: "Guest 5 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-05.png"
-  },
-  {
-    id: "guest06",
-    name: "Guest 6 Name",
-    designation: "Guest 6 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-06.png"
-  },
-  {
-    id: "guest07",
-    name: "Guest 7 Name",
-    designation: "Guest 7 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-07.png"
-  },
-  {
-    id: "guest08",
-    name: "Guest 8 Name",
-    designation: "Guest 8 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-08.png"
-  },
-  {
-    id: "guest09",
-    name: "Guest 9 Name",
-    designation: "Guest 9 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-09.png"
-  },
-  {
-    id: "guest10",
-    name: "Guest 10 Name",
-    designation: "Guest 10 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-10.png"
-  },
-  {
-    id: "guest11",
-    name: "Guest 11 Name",
-    designation: "Guest 11 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-11.png"
-  },
-  {
-    id: "guest12",
-    name: "Guest 12 Name",
-    designation: "Guest 12 Designation",
-    institution: "Vikash Institute of Technology & Vikash Polytechnic",
-    image: "invitations/invitation-12.png"
-  }
+  { id: "guest01", name: "Sri D. Nageswar Rao", designation: "Chairman", institution: "Laxmi Vikash Group of Institutions", video: "videos/d-nageswar-rao.mp4" },
+  { id: "guest02", name: "Prof. Ajay Kumar Mahapatra", designation: "Chief Administrative Officer (CAO)", institution: "Laxmi Vikash Group of Institutions", video: "videos/ajay-kumar-mahapatra.mp4" },
+  { id: "guest03", name: "Shri P. K. Dash", designation: "Senior Advisor", institution: "Chairman's Office", video: "videos/p-k-dash.mp4" },
+  { id: "guest04", name: "Prasanna Kumar Dash", designation: "Senior Advisor", institution: "Chairman's Office", video: "videos/prasanna-kumar-dash.mp4" },
+  { id: "guest05", name: "Dr. Purnendu Mishra", designation: "Principal", institution: "Vikash Institute of Technology (VIT)", video: "videos/purnendu-mishra.mp4" },
+  { id: "guest06", name: "Dr. Dilip Khamari", designation: "Principal", institution: "Vikash Polytechnic (VPT)", video: "videos/dilip-khamari.mp4" },
+  { id: "guest07", name: "Prof. Satyabrata Mishra", designation: "Principal", institution: "Vikash Degree College (VDC)", video: "videos/satyabrata-mishra.mp4" },
+  { id: "guest08", name: "Dr. Kshirod Pradhan", designation: "Principal", institution: "Vikash School of Business Management (VSBM)", video: "videos/guest-08.mp4" },
+  { id: "guest09", name: "Dr. Bikram Kumar Das", designation: "Principal", institution: "Vikash Law School (VLS)", video: "videos/bikram-kumar-das.mp4" },
+  { id: "guest10", name: "Ms. Dipanjali Patel", designation: "Principal", institution: "Vikash Nursing College (VNC)", video: "videos/dipanjali-patel.mp4" },
+  { id: "guest11", name: "Dr. Subhendra Sekhar Mishra", designation: "Principal", institution: "Vikash Pharmacy College (VPC)", video: "videos/subhendra-sekhar-mishra.mp4" },
+  { id: "guest12", name: "Mr. R. S. V. Krishna", designation: "Dean, Student Affairs", institution: "VHEI", video: "videos/r-s-v-krishna.mp4" },
+  { id: "guest13", name: "Mr. Deepak Kumar Nayak", designation: "Vice Principal", institution: "Vikash School of Business Management (VSBM)", video: "videos/deepak-kumar-nayak.mp4" }
 ];
-
-// Function to get guest by ID
-function getGuestById(id) {
-  return GUESTS.find(guest => guest.id === id);
-}
-
-// Function to get all guests
-function getAllGuests() {
-  return GUESTS;
-}
+function getGuestById(id) { return GUESTS.find(g => g.id === id); }
+function getAllGuests() { return GUESTS; }
