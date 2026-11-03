@@ -39,7 +39,9 @@ function generateAllQRCodes() {
   
   items.forEach((item, index) => {
     setTimeout(() => {
-      const invitationUrl = `${baseUrl}/invitation.html?id=${item.id}`;
+      const invitationUrl = (qrTypeSelect && qrTypeSelect.value === 'staff')
+        ? `${baseUrl}/pages/staff.html?id=${item.id}`
+        : `${baseUrl}/invitation.html?id=${item.id}`;
       const card = document.createElement('div');
       card.className = 'qr-card';
       
@@ -135,7 +137,9 @@ function downloadAllQRCodes() {
   
   let processed = 0;
   items.forEach(item => {
-    const invitationUrl = `${baseUrl}/invitation.html?id=${item.id}`;
+    const invitationUrl = (qrTypeSelect && qrTypeSelect.value === 'staff')
+      ? `${baseUrl}/pages/staff.html?id=${item.id}`
+      : `${baseUrl}/invitation.html?id=${item.id}`;
     
     // Create a temporary QR code
     const tempDiv = document.createElement('div');
