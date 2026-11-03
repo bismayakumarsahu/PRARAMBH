@@ -3,3 +3,4 @@ const STAFF = [
   { id: "staff02", name: "Ms. DEF", designation: "Faculty" }
 ];
 function getAllStaff() { return STAFF; }
+function getStaffById(id) { return STAFF.find(s => s.id === id); }

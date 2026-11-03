@@ -49,42 +49,45 @@
   </footer>
 </div>
 <script src="js/guests.js"></script>
+<script src="js/staff.js"></script>
 <script>
 function getUrlParameter(name){const u=new URLSearchParams(window.location.search);return u.get(name);}
+function getPersonById(id){return (typeof getGuestById==='function'?getGuestById(id):null) || (typeof getStaffById==='function'?getStaffById(id):null);}
 function loadInvitation(){
   const guestId=getUrlParameter('id');
   const content=document.getElementById('invitationContent');
   if(!guestId){content.innerHTML=`<div class="error-message"><h2>Invalid Invitation</h2><p>No guest ID provided.</p><a href="index.html" class="download-btn">Go to Main Page</a></div>`;return;}
-  const guest=getGuestById(guestId);
-  if(!guest){content.innerHTML=`<div class="error-message"><h2>Invalid Invitation</h2><p>The invitation link is not valid. Guest ID: <strong>${guestId}</strong></p><a href="index.html" class="download-btn">Go to Main Page</a></div>`;return;}
+  const guest=getPersonById(guestId);
+  if(!guest){content.innerHTML=`<div class="error-message"><h2>Invalid Invitation</h2><p>The invitation link is not valid. ID: <strong>${guestId}</strong></p><a href="index.html" class="download-btn">Go to Main Page</a></div>`;return;}
+  const institution=guest.institution||'PRARAMBH 2026';
+  const video=guest.video||'';
   content.innerHTML=`
     <div class="guest-info">
       <p style="color:var(--gold);letter-spacing:.2em;font-size:.9rem;">YOU ARE CORDIALLY INVITED</p>
       <h2 class="guest-name">${guest.name}</h2>
-      <p class="guest-designation">${guest.designation}</p>
-      <p class="guest-designation">${guest.institution}</p>
+      <p class="guest-designation">${guest.designation||''}</p>
+      <p class="guest-designation">${institution}</p>
     </div>
-    <div class="video-container">
+    ${video?`<div class="video-container">
       <div id="loading" class="loading">Loading invitation video...</div>
       <video id="invVideo" controls playsinline preload="metadata" style="display:none;">
-        <source src="${guest.video}" type="video/mp4">
+        <source src="${video}" type="video/mp4">
         Your browser does not support video playback.
       </video>
       <div id="vidError" class="error-message" style="display:none;"><h2>Video Not Available</h2><p>The invitation video could not be loaded. Please contact the organizers.</p></div>
     </div>
     <div class="download-section">
-      <button class="download-btn" onclick="downloadVideo('${guest.video}','PRARAMBH-2026-${guest.id}.mp4')">Download Invitation Video</button>
+      <button class="download-btn" onclick="downloadVideo('${video}','PRARAMBH-2026-${guest.id}.mp4')">Download Invitation Video</button>
       <br><small style="color:var(--muted);display:block;margin-top:.5rem;">Download the original MP4 invitation</small>
-    </div>`;
-  const video=document.getElementById('invVideo');
-  const loading=document.getElementById('loading');
-  video.addEventListener('loadedmetadata',()=>{loading.style.display='none';video.style.display='block';});
-  video.addEventListener('error',()=>{loading.style.display='none';document.getElementById('vidError').style.display='block';});
+    </div>`:''}`;
+  if(video){
+    const vid=document.getElementById('invVideo');
+    const loading=document.getElementById('loading');
+    vid.addEventListener('loadedmetadata',()=>{loading.style.display='none';vid.style.display='block';});
+    vid.addEventListener('error',()=>{loading.style.display='none';document.getElementById('vidError').style.display='block';});
+  }
 }
-function downloadVideo(path,filename){
-  const a=document.createElement('a');
-  a.href=path; a.download=filename; document.body.appendChild(a); a.click(); document.body.removeChild(a);
-}
+function downloadVideo(path,filename){if(!path)return;const a=document.createElement('a');a.href=path; a.download=filename; document.body.appendChild(a); a.click(); document.body.removeChild(a);}
 document.addEventListener('DOMContentLoaded',loadInvitation);
 </script>
 </body>
