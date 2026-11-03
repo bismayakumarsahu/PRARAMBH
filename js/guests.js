@@ -2,7 +2,7 @@ const GUESTS = [
   { id: "guest01", name: "Sri D. Nageswar Rao", designation: "Chairman", institution: "Laxmi Vikash Group of Institutions", video: "videos/Sj. D. Nageswar Rao.mp4" },
   { id: "guest02", name: "Prof. Ajay Kumar Mohapatra", designation: "Chief Administrative Officer (CAO)", institution: "Laxmi Vikash Group of Institutions", video: "videos/Prof. Ajay Ku. Mohapatra.mp4" },
   { id: "guest03", name: "Shri P. K. Dash", designation: "Senior Advisor", institution: "Chairman's Office", video: "videos/Shri P. K. Dash.mp4" },
-  { id: "guest04", name: "Mr. Jyoti Ranjan Mohanty", designation: "Senior Advisor", institution: "Chairman's Office", video: "videos/Mr. Jyoti Ranjan Mohanty.mp4" },
+  { id: "guest04", name: "Mr. Jyoti Ranjan Mohanty", designation: "Establishment Officer", institution: "VHEI", video: "videos/Mr. Jyoti Ranjan Mohanty.mp4" },
   { id: "guest05", name: "Dr. Purnendu Mishra", designation: "Principal", institution: "Vikash Institute of Technology (VIT)", video: "videos/Dr. Purnendu Mishra.mp4" },
   { id: "guest06", name: "Dr. Dillip Khamari", designation: "Principal", institution: "Vikash Polytechnic (VPT)", video: "videos/Dr. Dillip Khamari.mp4" },
   { id: "guest07", name: "Prof. Satyabrata Mishra", designation: "Principal", institution: "Vikash Degree College (VDC)", video: "videos/Prof. Satyabrata Mishra.mp4" },
